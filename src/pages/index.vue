@@ -2,25 +2,27 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h1>目前事項 {{ currentText }}</h1>
-        <h2>剩餘時間 {{ currentTime }}</h2>
+        <h1>目前事項：{{ currentText }}</h1>
+        <h2>剩餘時間：{{ currentTime }}</h2>
       </v-col>
       <v-col cols="12">
-        <v-btn
-          icon="mdi-play"
-          @click="startTimer"
-          :disabled="status === STATUS.COUNTING || (currentItem.length === 0 && items.length === 0)"
-        ></v-btn>
-        <v-btn
-          icon="mdi-pause"
-          :disabled="status !== STATUS.COUNTING"
-          @click="pauseTimer"
-        ></v-btn>
-        <v-btn
-          icon="mdi-skip-next"
-          :disabled="currentItem.length === 0"
-          @click="finishTimer"
-        ></v-btn>
+        <div class="btns">
+          <v-btn
+            icon="mdi-play"
+            @click="startTimer"
+            :disabled="status === STATUS.COUNTING || (currentItem.length === 0 && items.length === 0)"
+          ></v-btn>
+          <v-btn
+            icon="mdi-pause"
+            :disabled="status !== STATUS.COUNTING"
+            @click="pauseTimer"
+          ></v-btn>
+          <v-btn
+            icon="mdi-skip-next"
+            :disabled="currentItem.length === 0"
+            @click="finishTimer"
+          ></v-btn>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -115,3 +117,18 @@ const currentTime = computed(() => {
   return m + ':' + s
 })
 </script>
+
+<style scoped lang="scss">
+.v-container{
+  text-align: center;
+}
+
+.btns{
+  margin: auto;
+  width: 180px;
+  // background: darkblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+</style>
