@@ -118,3 +118,19 @@ const onEditInputSubmit = async (id, i) => {
   confirmEditItem(id)
 }
 </script>
+
+<style scoped lang="scss">
+
+thead{
+  background: rgb(249, 165, 21);
+}
+
+tbody{
+  background: rgb(255, 217, 0);
+  color: rgb(242, 82, 19);
+}
+
+.v-btn{
+  background: rgba(242, 115, 115, 0.604);
+  }
+</style>

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar>
+    <v-app-bar style="background: lightgreen;color: green;">
       <v-container class="d-flex align-center">
         <v-app-bar-title>
           <img src="./assets/tomato.png">
@@ -31,12 +31,8 @@
   width: 20px;
 }
 
-.v-app-bar{
-  background: rgb(204, 37, 3);
-}
-
 .v-main{
-  background: rgb(238, 102, 75);
+  background: rgb(240, 90, 60);
 }
 
 </style>

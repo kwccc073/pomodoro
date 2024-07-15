@@ -2,7 +2,12 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h1>目前事項：{{ currentText }}</h1>
+        <h1>
+            目前事項
+        </h1>
+        <h1 id='currentText'>
+          {{ currentText }}
+        </h1>
         <h2>剩餘時間：{{ currentTime }}</h2>
       </v-col>
       <v-col cols="12">
@@ -130,5 +135,13 @@ const currentTime = computed(() => {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.v-btn{
+  background: rgba(242, 115, 115, 0.604);
+  }
+
+#currentText{
+    font-size: 5vh;
 }
 </style>
